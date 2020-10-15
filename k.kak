@@ -91,7 +91,7 @@ evaluate-commands %sh{
     # Keyword list
     keywords="configuration module endmodule syntax rule require requires context"
     keywords="${keywords} syntax\ priorities syntax\ left syntax\ right syntax\ non-assoc"
-    keywords="${keywords} context\ alias"
+    keywords="${keywords} context\ alias claim"
 
     types="Bool String Bytes Float Int List Set Map Bag Array K KItem KBott StringBuffer KResult"
 
