@@ -1,4 +1,4 @@
-# kakoune syntax highlighting for K (https://github.com/kframework/k)
+# kakoune syntax highlighting for k (https://github.com/kframework/k)
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 # Detection
@@ -51,7 +51,8 @@ add-highlighter shared/k/code/ regex '\b\d+[eE][+-]?\d+\b' 0:value
 add-highlighter shared/k/code/ regex '(\b\d+)?\.\d+\b' 0:value
 add-highlighter shared/k/code/ regex '\b\d+\.' 0:value
 
-add-highlighter shared/k/code/ regex (?<=[\w\s\d\)\]'"_])(\+Int|\*Int|-Int|/Int|>Int|<Int|\[\]|#isConcrete|#isVariable|#collectOdd|#location) 0:operator
+add-highlighter shared/k/code/ regex (?<=[\w\s\d\)\]'"_])(\[\]|#isConcrete|#isVariable|#collectOdd|#location) 0:operator
+#add-highlighter shared/k/code/ regex (?<=[\w\s\d\)\]'"_])(\+Int|\*Int|-Int|/Int|>Int|<Int) 0:operator
 add-highlighter shared/k/code/ regex (?<=[\s])(\.\.\.|==|=/=|:=|:/=) 0:builtin   #space before
 add-highlighter shared/k/code/ regex (?<=[\s])((::=|=>|~>|\||>)\s)   0:builtin   #space before and after
 add-highlighter shared/k/code/ regex (:|::|:>)                       0:builtin   #no space restrictions
@@ -62,7 +63,7 @@ add-highlighter shared/k/code/ regex (?<=[\w\s\d'"_])(#Layout) 0:type
 #rule labels?
 
 # K cells
-add-highlighter shared/k/tag           region               '(?!<String)((?!<Float)((?!<Int)((?=<[\w/])<)))'  '(?<=[\w/])>'  regions
+add-highlighter shared/k/tag           region               '(?!<Rat)((?!<String)((?!<Float)((?!<Int)((?=<[\w/])<))))'  '(?<=[\w/])>'  regions
 add-highlighter shared/k/tag/          region               '"' (?<!\\)(\\\\)*"        fill string
 add-highlighter shared/k/tag/          region               "'" "'"                    fill string
 
@@ -85,7 +86,7 @@ evaluate-commands %sh{
     attributes="${attributes} avoid equalEqualK notEqualEqualK bracket memo unused notInRules"
     attributes="${attributes} autoReject heat cool result hybrid alias macro-rec alias-rec"
     attributes="${attributes} smt-lemma lemma trusted unboundVariables priority all-path"
-    attributes="${attributes} one-path locations color colors structural"
+    attributes="${attributes} one-path locations color colors structural not-lr1"
     
     # Keyword list
     keywords="configuration module endmodule syntax rule require requires context"
