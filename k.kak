@@ -57,7 +57,7 @@ add-highlighter shared/k/code/ regex (?<=[\s])(\.\.\.|==|=/=|:=|:/=) 0:builtin  
 add-highlighter shared/k/code/ regex (?<=[\s])((::=|=>|~>|\||>)\s)   0:builtin   #space before and after
 add-highlighter shared/k/code/ regex (:|::|:>)                       0:builtin   #no space restrictions
 add-highlighter shared/k/code/ regex ^\h*(?:import|imports)\h+(\S+) 1:module
-add-highlighter shared/k/code/ regex (?<=[\w\s\d'"_])(#if|#then|#else|#fi|#Ceil|#Equals|#And|#Or|#as|#fun) 0:keyword
+add-highlighter shared/k/code/ regex (?<=[\w\s\d'"_])((#if|#then|#else|#fi|#Ceil|#Equals|#And|#Or|#as|#fun)\s) 0:keyword
 add-highlighter shared/k/code/ regex (?<=[\w\s\d'"_])(#Layout) 0:type
 
 #rule labels?
