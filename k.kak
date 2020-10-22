@@ -63,7 +63,7 @@ add-highlighter shared/k/code/ regex (?<=[\w\s\d'"_])(#Layout) 0:type
 #rule labels?
 
 # K cells
-add-highlighter shared/k/tag           region               '(?!<Rat)((?!<String)((?!<Float)((?!<Int)((?=<[\w/])<))))'  '(?<=[\w/])>'  regions
+add-highlighter shared/k/tag           region               '(?!<Rat)((?!<String)((?!<Float)((?!<Int)((?=<[\w/])<))))'  (?<=[\w/"'])>  regions
 add-highlighter shared/k/tag/          region               '"' (?<!\\)(\\\\)*"        fill string
 add-highlighter shared/k/tag/          region               "'" "'"                    fill string
 
