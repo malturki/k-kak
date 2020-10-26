@@ -3,6 +3,8 @@
 Basic syntax highlighting for K ([the K Framework](https://github.com/kframework/k))
 in the [Kakoune text editor](https://kakoune.org).
 
+**NOTE: This is now maintained in the [K Editor Support Github repository](https://github.com/kframework/k-editor-support/tree/master/k-kak). Please refer to that repository for the latest version, or for reporting issues or suggesting improvements.**
+
 ## Overview
 
 Syntax highlighting definitions are given in the file `k.kak`. The file  defines different highlighting
@@ -17,7 +19,7 @@ gentle introduction to defining kakoune highlighters and the official
 
 *Note: Syntax highlighting in `k.kak` does not attempt to be anywhere near perfect. It's more of a
 "looks sensible" kind of highlighting. Having said that, I'd very much welcome suggestions
-for improvement, so please feel free to raise issues or suggest changes through this Github repo.*
+for improvement, so please feel free to raise issues or suggest changes.*
 
 ## Screenshot
 
@@ -88,6 +90,6 @@ file markdown file:
 ## Feedback and Suggestions
 
 Feel free to report problems by raising Github issues, or suggest improvements by making Github
-pull requests.
+pull requests, at the [K Editor Support Github repository](https://github.com/kframework/k-editor-support/tree/master/k-kak).
 
 
